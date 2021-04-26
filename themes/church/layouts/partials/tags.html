@@ -1,0 +1,8 @@
+<div class="tags">
+<span class="tags--title">{{ i18n "taxo_tags" }}:</span>
+<ul>
+{{ range .Params.tags -}}
+<li class="button"><a href="{{ "/tags/" | relLangURL }}{{ . | urlize }}">{{ . }}</a></li>
+{{ end -}}
+</ul>
+</div>

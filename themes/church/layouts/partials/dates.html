@@ -1,0 +1,7 @@
+<div class="content-dates">
+{{ if isset . "lastmod" }}
+published {{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}, last modified on {{ .Lastmod.Format ($.Param "dateformat" | default "2 January, 2006") }}<br>
+{{ else }}
+{{ .Date.Format ($.Param "dateformat" | default "2 January, 2006") }}
+{{ end }}
+</div>

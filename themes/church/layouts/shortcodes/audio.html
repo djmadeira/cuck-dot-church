@@ -1,0 +1,16 @@
+<div class="player">
+    <audio preload="{{ .Get "preload" | default "metadata" }}">
+    {{ with .Get "src" }}<source src="{{ . | relURL }}" type="audio/mpeg">{{ end }}
+    </audio>
+    <div class="player--status">
+        <span class="player--currenttime">00:00</span>/<br><span class="player--duration">00:00</span>
+    </div>
+    <div class="player--controls">
+        <div class="player--nowplaying">
+            {{ with .Get "title" }}{{ . }}{{ end }}
+        </div>
+        <button class="player--pause">Play/Pause</button>
+        <input type="range" class="player--volume" max="100" value="100">
+        <input type="range" class="player--seek" value="0">
+    </div>
+</div>

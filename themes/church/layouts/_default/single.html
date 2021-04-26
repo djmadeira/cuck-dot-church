@@ -1,0 +1,19 @@
+{{ define "main" -}}
+<main class="main layout__main">
+<article class="{{ with .Section }}section-{{ . | urlize }} {{ end }}single-view">
+<header>
+<h1 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}">{{ .Title }}</h1>
+<div class="post-meta">
+    {{ partial "dates.html" . }}
+    {{ if .Params.tags }}{{ partial "tags.html" . }}{{ end -}}
+</div>
+</header>
+<div class="content">
+{{ .Content }}
+
+{{ if $.Param "relatedposts" | default false }}{{ partial "related.html" . }}{{ end -}}
+
+</div>
+</article>
+</main>
+{{ end }}

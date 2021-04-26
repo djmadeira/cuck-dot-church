@@ -1,0 +1,9 @@
+{{ $main_options := (dict "targetPath" "css/styles.css" "outputStyle" "compressed" "enableSourceMap" false "includePaths" (slice "assets/lib/typey/stylesheets")) -}}
+{{ if eq hugo.Environment "development" -}}
+  {{ $main_options = merge $main_options (dict "outputStyle" "nested" "enableSourceMap" true) -}}
+{{ end -}}
+{{ $main_style := resources.Get "sass/styles.scss" | toCSS $main_options -}}
+{{ if ne hugo.Environment "development" -}}
+  {{ $main_style = $main_style | fingerprint -}}
+{{ end -}}
+<link rel="stylesheet" href="{{ $main_style.RelPermalink }}">

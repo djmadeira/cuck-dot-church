@@ -1,0 +1,14 @@
+baseURL: "https://cuck.church/"
+languageCode: "en-us"
+title: "cuck.church"
+theme: "church"
+
+menu:
+    main: []
+
+params:
+  dateFormat: "Jan 2 2006"
+
+  mobileMenu: false
+  showMenu: false
+  copyright: "All content, code and assets GPL"
