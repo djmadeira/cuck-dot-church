@@ -6,13 +6,15 @@
 // ----------------------------- TYPOGRAPHY ----------------------------- //
 
 body {
-    font-family: 'Monaco', sans-serif;
-    font-size: 12px;
-    line-height: 1.5
+    font-family: $font-body;
+    font-size: 14px;
+    line-height: 1.2;
 }
 
 h1, h2, h3 {
-    text-transform: lowercase;
+    font-family: $font-heading;
+    text-transform: uppercase;
+    line-height: 1.3;
 }
 
 a {
@@ -38,11 +40,11 @@ html {
     color: #000000;
     padding: $site-padding;
     max-width: 600px;
-    margin: 24px 4px 4px;
+    margin: 24px auto 16px;
     border: 4px ridge silver;
 
-    @media only screen and (min-width: 800px) {
-        margin: 16rem auto 0;
+    @media only screen and (min-width: $breakpoint-large) {
+        margin: 16rem auto 16px;
     }
 }
 
@@ -59,17 +61,18 @@ html {
     padding: $site-padding;
     background: silver;
     border: 4px ridge silver;
+}
 
-    h1 {
-        display: inline;
-        vertical-align:: baseline;
-        margin: 0;
-        text-shadow: 0.5px 0.5px 0px $color-shadow, -0.5px -0.5px 0px white;
+.header__site-name {
+    text-transform: none;
+    display: inline;
+    vertical-align:: baseline;
+    margin: 0;
+    text-shadow: 0.5px 0.5px 0px $color-shadow, -0.5px -0.5px 0px white;
 
-        a {
-            text-decoration: none;
-            color: black;
-        }
+    a {
+        text-decoration: none;
+        color: black;
     }
 }
 
@@ -83,8 +86,17 @@ html {
 }
 
 .header__subtitle {
-    font-size: 10px;
+    display: block;
+    font-size: 12px;
     vertical-align: baseline;
+
+    @media only screen and (min-width: $breakpoint-mid) {
+        display: inline-block;
+    }
+}
+
+.layout__main {
+    padding: 12px 8px;
 }
 
 .footer {
@@ -105,7 +117,9 @@ html {
 }
 
 .post-meta {
+    padding-bottom: 1rem;
     margin-bottom: 1rem;
+    border-bottom: 4px double black;
 }
 
 .content-dates {
@@ -135,9 +149,10 @@ html {
 }
 
 .player {
-    font-family: 'Arial', sans-serif;
+    font-family: $font-player;
+    font-size: 16px;
     display: flex;
-    max-width: 500px;
+    max-width: 360px;
     flex-flow: row nowrap;
     background: linear-gradient(to left, #39395b, #3A3958, #39395B);
     border: 2px outset #696A7F; 
@@ -147,7 +162,6 @@ html {
 }
 
 .player-pane {
-    font-family: 'PT Mono', fixed-width;
     background: black;
     border: 2px inset #696A7F;
     padding: 2px;
@@ -157,14 +171,15 @@ html {
 
 .player--status {
     @extend .player-pane;
-    flex-basis: 150px;
+    font-size: 24px;
+    flex-basis: 144px;
     height: 120px;
     flex-shrink: 1;
     text-align: right;
     margin-right: 8px;
-    font-size: 20px;
     line-height: 1;
     position: relative;
+    overflow: hidden;
 
     $color-peak: #72737F;
     $color-red: #BE3D22;
@@ -262,7 +277,7 @@ html {
     display: flex;
     align-content: flex-start;
     flex-wrap: wrap;
-    flex-basis: 250px;
+    flex-basis: 100px;
     flex-grow: 2;
     align-items: baseline;
 
@@ -286,6 +301,7 @@ html {
     overflow: scroll;
     pointer-events: none;
     margin-bottom: 8px;
+    line-height: 1.1;
     color: rgba(22, 236, 20, 1);
     transition: color 2s ease-in-out;
 }
@@ -297,6 +313,7 @@ html {
     border: 2px outset #DCF0F2;
     border-radius: 1px;
     text-indent: -99999px;
+    line-height: 1;
     width: 3rem;
     height: 2rem;
     margin: 0 8px 8px 0;
@@ -373,11 +390,13 @@ html {
     -webkit-appearance: none;
     -moz-appearance: none;
     height: 0.5rem;
-    flex-basis: 25%;
+    flex-basis: 50px;
+    flex-grow: 1;
     min-width: 120px;
     background: #D3631B;
     border-radius: 0.5rem;
     border: 2px inset #696A7F;
+    margin-bottom: 8px;
 
     &::-webkit-slider-thumb {
         @include player-volume-thumb;

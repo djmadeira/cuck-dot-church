@@ -6,4 +6,6 @@
 {{ if ne hugo.Environment "development" -}}
   {{ $main_style = $main_style | fingerprint -}}
 {{ end -}}
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=B612+Mono:ital@1&family=Cutive+Mono&family=VT323&display=swap" rel="stylesheet"> 
 <link rel="stylesheet" href="{{ $main_style.RelPermalink }}">
