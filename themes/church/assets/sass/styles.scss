@@ -110,6 +110,14 @@ html {
     p {
         margin: 0;
     }
+
+    a {
+        color: black;
+    }
+}
+
+.feedlinks {
+    float: right;
 }
 
 .title {
@@ -152,7 +160,7 @@ html {
     font-family: $font-player;
     font-size: 16px;
     display: flex;
-    max-width: 360px;
+    max-width: 400px;
     flex-flow: row nowrap;
     background: linear-gradient(to left, #39395b, #3A3958, #39395B);
     border: 2px outset #696A7F; 
@@ -173,13 +181,14 @@ html {
     @extend .player-pane;
     font-size: 24px;
     flex-basis: 144px;
-    height: 120px;
+    min-height: 120px;
     flex-shrink: 1;
     text-align: right;
     margin-right: 8px;
     line-height: 1;
     position: relative;
     overflow: hidden;
+    align-self: stretch;
 
     $color-peak: #72737F;
     $color-red: #BE3D22;
@@ -279,7 +288,7 @@ html {
     flex-wrap: wrap;
     flex-basis: 100px;
     flex-grow: 2;
-    align-items: baseline;
+    align-items: center;
 
     &::before, &::after {
         display: block;
@@ -306,21 +315,24 @@ html {
     transition: color 2s ease-in-out;
 }
 
-.player--pause {
+.player-button {
+    display: block;
     position: relative;
+    box-sizing: border-box;
     background: #D0DBED;
+    font-size: 0;
+    text-indent: -99999px;
     color: #222F40;
     border: 2px outset #DCF0F2;
     border-radius: 1px;
-    text-indent: -99999px;
-    line-height: 1;
     width: 3rem;
     height: 2rem;
     margin: 0 8px 8px 0;
+    line-height: 1;
 
     &::after {
+        font-size: initial;
         display: block;
-        content: '▶';
         position: absolute;
         top: 50%;
         left: 50%;
@@ -329,6 +341,14 @@ html {
         width: 1rem;
         height: 1rem;
     }
+}
+
+.player--pause {
+    @extend .player-button;
+
+    &::after {
+        content: '▶';
+    }
 
     &.pause {
         &::after {
@@ -336,6 +356,14 @@ html {
             font-size: 16px;
             line-height: 1;
         }
+    }
+}
+
+.player--download {
+    @extend .player-button;
+
+    &::after {
+        content: '⬇';
     }
 }
 
@@ -390,9 +418,8 @@ html {
     -webkit-appearance: none;
     -moz-appearance: none;
     height: 0.5rem;
-    flex-basis: 50px;
+    width: 50px;
     flex-grow: 1;
-    min-width: 120px;
     background: #D3631B;
     border-radius: 0.5rem;
     border: 2px inset #696A7F;

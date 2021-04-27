@@ -9,8 +9,9 @@
         <div class="player--nowplaying">
             {{ with .Get "title" }}{{ . }}{{ end }}
         </div>
-        <button class="player--pause">Play/Pause</button>
-        <input type="range" class="player--volume" max="100" value="100">
-        <input type="range" class="player--seek" value="0">
+        <button class="player--pause" title="Play/Pause">Play/Pause</button>
+        {{ with .Get "src" }}<a href="{{ . | relURL }}" download class="player--download" title="download">Download</a>{{ end }}
+        <input type="range" class="player--volume" max="100" value="100" title="Volume">
+        <input type="range" class="player--seek" value="0" title="Seek">
     </div>
 </div>

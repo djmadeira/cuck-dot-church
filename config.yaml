@@ -8,7 +8,8 @@ params:
   dateFormat: "Jan 2 2006"
   mobileMenu: false
   showMenu: false
-  copyright: "All content, code and assets GPL"
+  footer: "All content, code, and assets GPL. [GitHub](https://github.com/djmadeira/cuck-dot-church)"
+  feedLinks: true
 deployment:
   targets:
     name: "aws"
