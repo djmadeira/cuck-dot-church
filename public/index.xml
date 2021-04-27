@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cuck.church</title>
+    <link>https://www.cuck.church/</link>
+    <description>Recent content on cuck.church</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 26 Apr 2021 10:09:56 -0400</lastBuildDate>
+    <atom:link href="https://www.cuck.church/index.xml" rel="self" type="application/rss+xml" />
+    
+    <item>
+      <title>Reading Group: Max Weber Chapter III</title>
+      <link>https://www.cuck.church/posts/max_weber_religious_foundations_worldly_asecticism/</link>
+      <pubDate>Mon, 26 Apr 2021 10:09:56 -0400</pubDate>
+      <guid>https://www.cuck.church/posts/max_weber_religious_foundations_worldly_asecticism/</guid>
+      <description>&lt;p&gt;&lt;a href=&#34;https://drive.google.com/file/d/1ECKEuYEqueSwYtCCme4PV9VJm-sbrQ8A/view?usp=drivesdk&#34;&gt;download the pdf&lt;/a&gt;&lt;/p&gt;
+&lt;div class=&#34;player&#34;&gt;
+    &lt;audio preload=&#34;metadata&#34;&gt;
+    &lt;source src=&#34;https://www.cuck.church/podcasts/weber_2020-02-28.mp3&#34; type=&#34;audio/mpeg&#34;&gt;
+    &lt;/audio&gt;
+    &lt;div class=&#34;player--status&#34;&gt;
+        &lt;span class=&#34;player--currenttime&#34;&gt;00:00&lt;/span&gt;/&lt;br&gt;&lt;span class=&#34;player--duration&#34;&gt;00:00&lt;/span&gt;
+    &lt;/div&gt;
+    &lt;div class=&#34;player--controls&#34;&gt;
+        &lt;div class=&#34;player--nowplaying&#34;&gt;
+            The Protestant Ethic and the Spirit of Capitalism III: The Religious Foundations of Worldly Asecticism
+        &lt;/div&gt;
+        &lt;button class=&#34;player--pause&#34;&gt;Play/Pause&lt;/button&gt;
+        &lt;input type=&#34;range&#34; class=&#34;player--volume&#34; max=&#34;100&#34; value=&#34;100&#34;&gt;
+        &lt;input type=&#34;range&#34; class=&#34;player--seek&#34; value=&#34;0&#34;&gt;
+    &lt;/div&gt;
+&lt;/div&gt;
+
+</description>
+    </item>
+    
+  </channel>
+</rss>
