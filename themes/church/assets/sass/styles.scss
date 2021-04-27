@@ -31,7 +31,9 @@ a {
 // ------------------------------- LAYOUT ------------------------------- //
 
 html {
-    background: blue;
+    background: linear-gradient(to top, #000, #0002FF) no-repeat;
+    background-size: cover;
+    height: 100vh;
 }
 
 .page {
