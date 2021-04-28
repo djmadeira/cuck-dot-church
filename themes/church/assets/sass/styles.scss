@@ -315,6 +315,12 @@ html {
     line-height: 1.1;
     color: rgba(22, 236, 20, 1);
     transition: color 2s ease-in-out;
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
+    &::-webkit-scrollbar {
+      display: none;
+    }
 }
 
 .player-button {
