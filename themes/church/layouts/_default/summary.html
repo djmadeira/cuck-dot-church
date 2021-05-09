@@ -2,5 +2,6 @@
 <header>
 <h2 class="title {{ if $.Param "submitted" | default false }}title-submitted{{ end }}"><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
 {{ if $.Param "submitted" | default false }}{{ partial "submitted.html" . -}}{{ end }}
+{{ with .Date }}<time class="created-date" datetime="{{ .Format "2006-01-02T15:04:05Z07:00" }}">{{ .Format "2006/01/02" }}</time>{{ end }}
 </header>
 </article>

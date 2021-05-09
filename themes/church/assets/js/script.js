@@ -27,7 +27,7 @@
 
         const calculateTime = (secs) => {
             const hours = Math.floor(secs / 60 / 60);
-            const minutes = Math.floor(secs / 60);
+            const minutes = Math.floor(secs / 60) - (hours * 60);
             const seconds = Math.floor(secs % 60);
             return `${hours > 0 ? `${pad(hours)}:` : ''}${pad(minutes)}:${pad(seconds)}`;
         };
