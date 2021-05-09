@@ -10,23 +10,3 @@ params:
   showMenu: false
   footer: "All content, code, and assets GPL. [GitHub](https://github.com/djmadeira/cuck-dot-church)"
   feedLinks: true
-deployment:
-  targets:
-    name: "aws"
-    URL: "s3://www.cuck.church?region=us-east-1"
-  matchers: [
-    {
-      pattern: "^.+\\.(js|css|svg|ttf)$",
-      cacheControl: "max-age=31536000, no-transform, public",
-      gzip: true
-    },
-    {
-      pattern: "^.+\\.(png|jpg)$",
-      cacheControl: "max-age=31536000, no-transform, public",
-      gzip: false
-    },
-    {
-      pattern: "^.+\\.(html|xml|json)$",
-      gzip: true
-    }
-  ]
