@@ -6,6 +6,11 @@
 (function ($) {
     'use strict';
 
+    console.log(`////////////////////////////////////////////////////////////////
+///////////////// you iz a haxor, good 4 u ☺️ //////////////////
+///////// https://github.com/djmadeira/cuck-dot-church /////////
+////////////////////////////////////////////////////////////////`);
+
     // Place your code here.
 
     document.querySelectorAll('.player').forEach(function (e) {
@@ -40,7 +45,6 @@
 
         const setDuration = () => {
             seekControl.max = Math.floor(audio.duration);
-            console.log(audio.duration);
             endTime.textContent = calculateTime(audio.duration);
         };
 
