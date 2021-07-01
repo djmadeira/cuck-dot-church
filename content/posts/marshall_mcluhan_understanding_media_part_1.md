@@ -8,6 +8,6 @@ podcast:
 
 ---
 
-[download the pdf](/pdf/mcluhan_understanding_media.pdf)
+[download the pdf](https://cuckpodcasts.blob.core.windows.net/pdfs/mcluhan_understanding_media.pdf)
 
-{{< audio src="/podcasts/mcluhan_2020-05-23.mp3" title="Understanding Media: Part 1" >}}
+{{< audio src="https://cuckpodcasts.blob.core.windows.net/podcasts/mcluhan_2020-05-23.mp3" title="Understanding Media: Part 1" >}}

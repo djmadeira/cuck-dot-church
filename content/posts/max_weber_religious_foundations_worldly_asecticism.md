@@ -10,4 +10,4 @@ podcast:
 
 [download the pdf](https://drive.google.com/file/d/1ECKEuYEqueSwYtCCme4PV9VJm-sbrQ8A/view?usp=drivesdk)
 
-{{< audio src="/podcasts/weber_2020-02-28.mp3" title="The Protestant Ethic and the Spirit of Capitalism III: The Religious Foundations of Worldly Asecticism" >}}
+{{< audio src="https://cuckpodcasts.blob.core.windows.net/podcasts/weber_2020-02-28.mp3" title="The Protestant Ethic and the Spirit of Capitalism III: The Religious Foundations of Worldly Asecticism" >}}

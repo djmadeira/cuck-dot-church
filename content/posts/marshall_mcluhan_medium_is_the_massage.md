@@ -8,6 +8,6 @@ podcast:
 
 ---
 
-[download the pdf](/pdf/themediumisthemassage_marshallmcluhan_quentinfiore.pdf)
+[download the pdf](https://cuckpodcasts.blob.core.windows.net/pdfs/themediumisthemassage_marshallmcluhan_quentinfiore.pdf)
 
-{{< audio src="/podcasts/mcluhan_2020-05-09.mp3" title="The Medium is the Massage: An Inventory of Effects" >}}
+{{< audio src="https://cuckpodcasts.blob.core.windows.net/podcasts/mcluhan_2020-05-09.mp3" title="The Medium is the Massage: An Inventory of Effects" >}}

@@ -5,6 +5,6 @@ podcast:
     mp3: /podcasts/mcluhan_2020-06-13.mp3
     duration:
 ---
-[download the pdf](/pdf/mcluhan_understanding_media.pdf)
+[download the pdf](https://cuckpodcasts.blob.core.windows.net/pdfs/mcluhan_understanding_media.pdf)
 
-{{< audio src="/podcasts/mcluhan_2020-06-13.mp3" title="Understanding Media: Chapters 8-13" >}}
+{{< audio src="https://cuckpodcasts.blob.core.windows.net/podcasts/mcluhan_2020-06-13.mp3" title="Understanding Media: Chapters 8-13" >}}
