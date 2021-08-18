@@ -5,6 +5,7 @@
 
 // ----------------------------- TYPOGRAPHY ----------------------------- //
 
+
 body {
     font-family: $font-body;
     font-size: 14px;
@@ -31,7 +32,7 @@ a {
 // ------------------------------- LAYOUT ------------------------------- //
 
 html {
-    background: linear-gradient(to top, #000, #0002FF) no-repeat;
+    background: $background-gradient;
     background-size: cover;
     height: 100vh;
 }
@@ -108,6 +109,10 @@ html {
     text-transform: uppercase;
     border: 4px ridge silver;
     background: silver;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    justify-content: flex-end;
 
     p {
         margin: 0;
@@ -118,8 +123,46 @@ html {
     }
 }
 
+.footer__content {
+    flex-grow: 1;
+}
+
+.footer__theme {
+    display: inline-block;
+
+    button {
+        box-sizing: border-box;
+        appearance: none;
+        border: 1px solid $color-shadow;
+        background: black;
+        display: inline-block;
+        width: 12px;
+        height: 14px;
+        border-radius: 14px;
+        text-indent: -9999px;
+
+        &[data-theme="default"] {
+            background: $background-gradient;
+        }
+
+        &[data-theme="spacegoat"] {
+            background: linear-gradient(to left, 
+                #000 0%, 
+                #000 12.5%, 
+                rgb(255, 0, 6) 12.5%, 
+                rgb(255, 0, 6) 37.5%, 
+                rgb(1, 255, 36) 37.5%,
+                rgb(1, 255, 36) 62.5%,
+                rgb(33, 0, 355) 62.5%,
+                rgb(33, 0, 355) 87.5%,
+                #000 87.5%
+            );
+        }
+    }
+}
+
 .feedlinks {
-    float: right;
+    padding-right: 8px;
 }
 
 .title {
@@ -451,3 +494,87 @@ html {
     }
 }
 
+$spacegoat-green: rgb(1, 255, 36);
+$spacegoat-purple: rgb(184, 0, 255);
+$spacegoat-red: rgb(254, 2, 6);
+
+.theme-spacegoat {
+    background: black;
+    color: $spacegoat-green;
+
+    body {
+        font-family: 'Comic Sans MS', sans-serif;
+        font-size: 18px;
+    }
+
+    a {
+        color: $spacegoat-purple;
+        text-transform: lowercase;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Comic Sans MS', serif;
+    }
+
+    .page {
+        background: black;
+        color: $spacegoat-green;
+        border: none;
+        margin: 4rem 0 0;
+        max-width: none;
+    }
+
+    .header {
+        border: none;
+        background: none;
+    }
+
+    .header__logo {
+        filter: none;
+    }
+
+    .header__logo-image {
+        max-height: none;
+    }
+
+    .header__site-name {
+        text-shadow: none;
+        vertical-align: bottom;
+
+        a {
+            color: $spacegoat-purple;
+        }
+    }
+
+    .header__subtitle {
+        font-size: 48px;
+        font-family: 'Papyrus', cursive;
+    }
+
+    .discord-invite {
+        text-shadow: 3px 1px 3px $spacegoat-red;
+        animation: hue-rotate 3s linear infinite;
+        font-size: 30px;
+        margin-bottom: 20px;
+    }
+
+    .main {
+        padding: 0;
+    }
+
+    .footer {
+        background: none;
+        border: none;
+        font-size: 18px;
+    }
+}
+
+@keyframes hue-rotate {
+    0% {
+        filter: hue-rotate(0deg);
+    }
+
+    100% {
+        filter: hue-rotate(360deg);
+    }
+}

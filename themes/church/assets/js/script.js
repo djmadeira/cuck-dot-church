@@ -11,7 +11,7 @@
 ///////// https://github.com/djmadeira/cuck-dot-church /////////
 ////////////////////////////////////////////////////////////////`);
 
-    // Place your code here.
+    // Audio player JS
 
     document.querySelectorAll('.player').forEach(function (e) {
         const pauseControl = e.querySelector('.player--pause');

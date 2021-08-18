@@ -17,8 +17,8 @@
 <div class="page layout__page{{ if $.Param "sidebar" | default true }} layout__sidebar-second{{ end }}">
 <a class="discord-invite" href="https://discord.gg/rCPu2GaTqs">join the discord!</a>
 <header class="header layout__header">
-{{ $logo_url := "/images/logo.png" | relURL -}}
-{{ if $.Param "logo" | default true }}<a href="{{ "/" | relLangURL }}" title="Home" rel="home" class="header__logo"><img src="{{ $logo_url }}" srcset="{{ $logo_url }}, {{ "images/logo@2x.png" | relURL }} 2x" alt="Home" class="header__logo-image"></a>{{ end }}
+{{ $logo_url := "/images/logo_default.png" | relURL -}}
+{{ if $.Param "logo" | default true }}<a href="{{ "/" | relLangURL }}" title="Home" rel="home" class="header__logo"><img src="{{ $logo_url }}" srcset="{{ $logo_url }}, {{ "images/logo_default@2x.png" | relURL }} 2x" alt="Home" class="header__logo-image"></a>{{ end }}
 <h1 class="header__site-name">
 <a href="{{ "/" | relLangURL }}" title="Home" class="header__site-link" rel="home"><span>{{ .Site.Title }}</span></a>
 </h1>
@@ -35,12 +35,15 @@
 {{ if $.Param "sidebar" }}{{ partial "sidebar.html" . }}{{ end -}}
 
 <footer class="footer layout__footer">
+{{ with $.Param "footer" }}<p class="footer__content">{{ . | markdownify }}</p>{{ end }}
 {{ if $.Param "feedlinks" }}{{ partial "feedlinks.html" . }}{{ end -}}
-{{ with $.Param "footer" }}<p>{{ . | markdownify }}</p>{{ end }}
+<div class="footer__theme">
+    <button class="footer__theme-switch" data-theme="default" title="Default">Default</button>
+    <button class="footer__theme-switch" data-theme="spacegoat" title="Spacegoat">Spacegoat</button>
+</div>
 </footer>
 {{ if $.Param "cookieconsent" }}{{ partial "cookieconsent.html" . }}{{ end -}}
 
 </div>
-{{ if $.Param "mobilemenu" }}{{ partial "mobilemenu.html" . }}{{ end -}}
 </body>
 </html>
