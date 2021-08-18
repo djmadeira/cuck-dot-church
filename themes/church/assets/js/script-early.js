@@ -52,7 +52,19 @@
             'dildo theory',
             'sex mutual aid'
         ];
-        document.querySelector('#subtitle').innerHTML = phrases[Math.floor(Math.random() * phrases.length)];
+
+        const phrases_spacegoat = [
+            'spacegoat will nerver leave u 😼',
+            'b honest... do u luv spacegoat like spacegoat luv u...? 🥺👉👈',
+            'im spacegoat.. 😤😖😈',
+            'spacegoat says rancib vibes only 🦷',
+            '*headbutts u* 😳😳',
+            'you: *nothing* spacegoat: *is litera trash*'
+        ];
+
+        const phraseList = theme === 'spacegoat' ? phrases_spacegoat : phrases; 
+
+        document.querySelector('#subtitle').innerHTML = phraseList[Math.floor(Math.random() * phraseList.length)];
 
         // Theme switcher
         document.querySelectorAll('.footer__theme-switch').forEach((t) => t.addEventListener('click', (e) => {
