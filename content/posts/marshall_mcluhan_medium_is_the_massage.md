@@ -3,7 +3,7 @@ title: "Marshall McLuhan: The Medium is the Massage"
 date: 2021-05-09T14:27:54-04:00
 tags: ["reading group", "the medium is the massage"]
 podcast:
-    mp3: /podcasts/mcluhan_2020-05-09.mp3
+    mp3: https://cuckpodcasts.blob.core.windows.net/podcasts/mcluhan_2020-05-09.mp3
     duration:
 
 ---
