@@ -5,8 +5,11 @@ theme: "church"
 menu:
     main: []
 params:
+  podcast:
+    cdn: https://cuckpodcasts.blob.core.windows.net/podcasts
   dateFormat: "Jan 2 2006"
   mobileMenu: false
   showMenu: false
   footer: "All content, code, and assets GPL. [GitHub](https://github.com/djmadeira/cuck-dot-church)"
   feedLinks: true
+
