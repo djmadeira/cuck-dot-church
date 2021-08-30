@@ -30,7 +30,7 @@
 
         const pad = (x) => x.toString().padStart(2, '0');
 
-        const calculateTime = (secs) => {
+        const printTime = (secs) => {
             const hours = Math.floor(secs / 60 / 60);
             const minutes = Math.floor(secs / 60) - (hours * 60);
             const seconds = Math.floor(secs % 60);
@@ -38,26 +38,29 @@
         };
 
         const whilePlaying = () => {
-            seekControl.value = Math.floor(audio.currentTime);
-            currentTime.textContent = calculateTime(seekControl.value);
+            if (audio.readyState > 1) {
+                seekControl.value = audio.currentTime;
+                currentTime.textContent = printTime(seekControl.value);
+            }
             raf = requestAnimationFrame(whilePlaying);
         };
 
         const setDuration = () => {
             seekControl.max = Math.floor(audio.duration);
-            endTime.textContent = calculateTime(audio.duration);
+            endTime.textContent = printTime(audio.duration);
         };
 
         seekControl.addEventListener('input', () => {
-            currentTime.textContent = calculateTime(seekControl.value);
+            currentTime.textContent = printTime(seekControl.value);
             if(!audio.paused) {
                 cancelAnimationFrame(raf);
             }
         });
 
         seekControl.addEventListener('change', () => {
-            audio.currentTime = seekControl.value;
+            audio.currentTime = parseInt(seekControl.value);
             if(!audio.paused) {
+                cancelAnimationFrame(raf);
                 requestAnimationFrame(whilePlaying);
             }
         });
