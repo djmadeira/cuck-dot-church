@@ -8,6 +8,7 @@ params:
   podcast:
     title: cuck.church
     description: A collection of pseuds, shitposters, and actual scholars who convene every other Sunday to discuss capitalism, art, history, religion, and cyberculture.
+    image: podcast.png
     category:
       name: "Society & Culture"
       subcategories: ["Philosophy"]
