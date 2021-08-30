@@ -17,7 +17,7 @@
         const pauseControl = e.querySelector('.player--pause');
         const seekControl = e.querySelector('.player--seek');
         const volumeControl = e.querySelector('.player--volume');
-        const currentTime = e.querySelector('.player--currenttime');
+        const timeDisplay = e.querySelector('.player--currenttime');
         const endTime = e.querySelector('.player--duration');
         const nowPlaying = e.querySelector('.player--nowplaying');
 
@@ -38,10 +38,8 @@
         };
 
         const whilePlaying = () => {
-            if (audio.readyState > 1) {
-                seekControl.value = audio.currentTime;
-                currentTime.textContent = printTime(seekControl.value);
-            }
+            seekControl.value = audio.currentTime;
+            timeDisplay.textContent = printTime(seekControl.value);
             raf = requestAnimationFrame(whilePlaying);
         };
 
@@ -51,16 +49,13 @@
         };
 
         seekControl.addEventListener('input', () => {
-            currentTime.textContent = printTime(seekControl.value);
-            if(!audio.paused) {
-                cancelAnimationFrame(raf);
-            }
+            timeDisplay.textContent = printTime(seekControl.value);
+            cancelAnimationFrame(raf);
         });
 
         seekControl.addEventListener('change', () => {
-            audio.currentTime = parseInt(seekControl.value);
+            audio.currentTime = parseFloat(seekControl.value, 10);
             if(!audio.paused) {
-                cancelAnimationFrame(raf);
                 requestAnimationFrame(whilePlaying);
             }
         });
